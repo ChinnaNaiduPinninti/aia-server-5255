@@ -1,0 +1,122 @@
+
+
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=11">
+  <meta http-equiv="cache-control" content="no-cache">
+  <title>%value $host encode(html)% - EDI Test Data Portal</title>
+  <link rel="stylesheet" type="text/css" href="layout.css">
+  <script>
+    var doc = document.documentElement;
+    var ua = navigator.userAgent;
+    var agent = ua.indexOf("Trident/7.0") >= 0 || ua.indexOf("MSIE") >= 0 ? "IE" : "NotIE";
+    doc.setAttribute('data-useragent', agent);
+    if (agent == "IE") {
+      document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"layout-ie.css\">");
+    }
+    else {
+      document.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"layout-nonie.css\">");
+    }
+  </script>
+  
+  <link rel="icon" HREF="favicon.ico" />
+  <style>
+    html, body, * {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.top {
+  margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+.menudiv {
+  float: left;
+  position: absolute;
+  top: 95px;
+  bottom: 90px;
+  padding: 10px;
+  overflow-y: auto;
+  left: 0;
+  width: 220px;
+  border-collapse: collapse;
+  border: none;
+}
+
+#footer {
+  background: #ddd;
+  height: 90px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+iframe {
+  border-collapse: collapse;
+  border: none;
+}
+
+.menuframe {
+  width: 250px;
+  border-collapse: collapse;
+  border: none;
+  scrolling: yes;
+  overflow-x: hidden;
+}
+
+.bottom {
+  position: absolute;
+  float: left;
+  top: 50px;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #ccc;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-collapse: collapse;
+}
+
+.contentframe {
+    border-collapse: collapse;
+    border: none;
+    bottom: 0;
+    left: 0;
+    margin-left: 250px;
+    margin-right: 0px;
+    position: absolute;
+    overflow-x: auto; /* Add horizontal scroll */
+    white-space: nowrap; /* Prevent content from wrapping */
+  }
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .menuframe	{ position: fixed; } 
+}
+  </style>
+  
+  
+  
+</head>
+<body>
+  <div><iframe class="top" src="top.dsp" id="top"></iframe></div>
+  <div class="bottom">
+    <iframe class="menuframe" name="menu" src="menu.dsp" scrolling="yes" seamless="seamless"></iframe>
+    <iframe class="contentframe" name="body" id="body" src="stats.dsp"></iframe>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache"> 
+    
+  </head>
+  <body>
+
+   <form id='myForm' action="stats1.dsp" methods="get">
+ %invoke Ui_Practise.v1.services:getStringLength%
+      <input type="text" id="input" name="input" required>  
+    <button >Submit</button>
+%endinvoke% 
+	</form> 
+
+  </body>
+</html>
+

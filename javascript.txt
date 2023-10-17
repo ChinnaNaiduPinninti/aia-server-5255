@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+
+<script>
+const obj = {
+  "result": {
+    "name": "John",
+    "age": 30,
+    "city": "New York",
+    "salaries": [
+      { "salary": 2, "totalAmount": 22 },
+      { "salary": 2, "totalAmount": 22 },
+      { "salary": 2, "totalAmount": 22 }
+    ]
+  }
+};
+
+// Format salaries array items
+obj.result.salaries.forEach(item => {
+  item.salary = item.salary.toFixed(2);
+});
+
+const prettyJSON = JSON.stringify(obj, null, 2);
+document.getElementById("demo").innerHTML = prettyJSON;
+</script>
+
+</body>
+</html>

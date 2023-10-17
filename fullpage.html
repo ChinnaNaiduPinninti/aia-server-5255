@@ -1,0 +1,242 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache"> 
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+       
+      }
+
+     
+
+      .loginDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+      }
+
+      .login-box {
+        width: 400px;
+        padding: 40px;
+        background: #d31145;
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+      }
+
+      .login-box .user-box {
+        position: relative;
+      }
+
+      .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+      }
+
+      .login-box .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: .5s;
+      }
+
+      .login-box .user-box input:focus ~ label,
+      .login-box .user-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #fff;
+        font-size: 12px;
+      }
+
+      input[type=button],
+      input[type=reset],
+      input[type=submit] {
+        position: relative;
+        display: inline-block;
+        padding: 10px 10px;
+        font-weight: bold;
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 3px;
+        background: #d31145;
+        border: none;
+      }
+
+      input[type=submit]:hover,
+      input[type=button]:hover,
+      input[type=reset]:hover {
+        background: #fff;
+        color: #272727;
+        border-radius: 5px;
+      }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+        border: 1px solid #555;
+ align-self: flex-start;
+        margin-left: 0px;
+        margin-top: 0px;
+      }
+
+      li {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      li {
+        text-align: center;
+        border-bottom: 1px solid #555;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+
+      li.active {
+        background-color: #d31145;
+        color: white;
+      }
+
+      li:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+@media (max-width: 660px) {
+         .searchDiv {
+          display: flex;
+        }
+
+        ul {
+          display: flex;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          width:60%;
+          font-size:12px;
+          background-color: #f1f1f1;
+          border: 1px solid #555;
+          overflow: visible; /* Allow list items to expand beyond the container */
+        }
+
+        li {
+          flex: 1;
+          text-align: center;
+          border: 1px solid #555;
+        }
+
+        
+
+        li {
+          display: block;
+          padding: 8px 16px;
+          text-decoration: none;
+          color: #000;
+        }
+
+        li.active {
+          background-color: #d31145;
+          color: white;
+        }
+
+        li:hover:not(.active) {
+          background-color: #555;
+          color: white;
+        }
+
+  .loginDiv {
+    margin-top: 20px;
+  }
+
+  .login-box {
+    width: 300px;
+    padding: 20px;
+    background: #d31145;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+
+  .login-box .user-box input {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .login-box .user-box label {
+    padding: 8px 0;
+    font-size: 12px;
+    transition: 0.5s;
+  }
+
+  input[type=submit],
+  input[type=button],
+  input[type=reset] {
+    padding: 8px 12px;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}
+
+
+</style>
+  </head>
+  <body>
+    <div class="container">
+   
+        <ul>
+          <li class="active">SEARCH BY</li>
+      <li>CASE NUMBER</li>
+      <li>REQUEST ID</li>
+        </ul>
+   
+      <div class="loginDiv">
+        <div class="login-box">
+          <form id="myForm" method="post">
+            <div class="user-box">
+              <input type="text" id="input" name="input" required>  
+              <label>INPUT</label>
+            </div>
+            <input type="button" value="Back" onclick="move()" />
+            <input type="Reset" value="Clear" class="button" />
+            <input type="submit" value="Submit" id="Submit" />    
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function move() {
+        window.location.href = "stats3.dsp";
+      } 
+    </script>
+  </body>
+</html>
